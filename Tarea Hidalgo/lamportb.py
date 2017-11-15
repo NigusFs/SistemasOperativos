@@ -35,7 +35,7 @@ class Cliente(Thread):#proceso
 		print("El cliente ",self.numId ," pago: ", random.randrange(500,50000,1))
 		panaderia.set_libre() #el panadero termino de vender, otro cliente puede comprar
 		self.cv.release() #El thread salio
-		print("Salio el thread de la panaderia ", self.numId," (Out ZC)")
+		print("Salio el thread " , self.numId ," de la panaderia  (Out ZC)")
 
 	def run(self):#entrar a la panaderia y sacar turno
 		self.cv.acquire() # el cliente entro a la panaderia
